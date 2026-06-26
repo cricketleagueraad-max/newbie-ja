@@ -96,3 +96,4 @@ public static class UserAgentFetcher {
         return agentsList;
     }
 }
+}
